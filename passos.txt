@@ -1,0 +1,2 @@
+1 - inicar o projeto -> npm init
+2 - instalar o express -> npm i express
