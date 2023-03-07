@@ -1,2 +1,12 @@
 1 - inicar o projeto -> npm init
 2 - instalar o express -> npm i express
+3 - instalar o pacote do node modules -> npm i que estão mapeados no packge-lock
+4 - instalar o nodemon -> 
+===== ejs - wiew ====
+instalar o ejs -> npm install ejs
+===== comandos npm mongoose =====
+1º  -> npm install mongoose
+
+npm uninstall mongoose  
+npm install mongoose@6.10.0 -> istalar a version para não ocorrer o erro.
+6º  -> npm install dotenv
