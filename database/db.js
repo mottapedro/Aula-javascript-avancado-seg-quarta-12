@@ -1,5 +1,5 @@
 const mongodb = require('mongoose');
-mongodb.set("strictQuery", true)
+mongodb.set("strictQuery", true);
 const connectToDatabase = async () => {
     //mongostat --uri mongodb+srv://pedro_motta:<PASSWORD>@aula-node-exemplo-clust.wkgj8dp.mongodb.net 
     //mongodb+srv://pedro_motta:<password>@aula-node-exemplo-clust.wkgj8dp.mongodb.net/?retryWrites=true&w=majority

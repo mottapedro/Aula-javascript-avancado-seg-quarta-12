@@ -8,5 +8,6 @@ instalar o ejs -> npm install ejs
 1º  -> npm install mongoose
 
 npm uninstall mongoose  
-npm install mongoose@6.10.0 -> istalar a version para não ocorrer o erro.
+npm install mongoose@6.10.0 -> instalar a version para não ocorrer o erro.
 6º  -> npm install dotenv
+

@@ -1,12 +1,28 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Lista de Tarefas</title>
 </head>
+
 <body>
-    <h1>Olá a todos!!</h1>
+    <form action="/create" method="post">
+        <input type="text" name="task" id="task" placeholder="insira uma tarefa">
+        <button type="submit" id="addButton">Adicionar</button>
+    </form>
+
+    <ul><!--loop para retornar a lista de tarefas-->
+        <% taskList.forEach((task)=> { %>
+            <li>
+                <%= task.task %> | <%= task.date.toLocaleDateString('pt-BR') %>
+            </li>
+            <% } )%>
+    </ul>
+
 </body>
+
 </html>
