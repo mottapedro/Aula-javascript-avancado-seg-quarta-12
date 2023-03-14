@@ -10,19 +10,31 @@
 </head>
 
 <body>
-    <form action="/create" method="post">
-        <input type="text" name="task" id="task" placeholder="insira uma tarefa">
-        <button type="submit" id="addButton">Adicionar</button>
-    </form>
+    <header>
+        <% if(task==null) { %>
+            <form action="/create" method="post">
+                <input type="text" name="task" id="task" placeholder="insira uma tarefa">
+                <button type="submit" id="addButton">Adicionar</button>
+            </form>
+            <% } else { %>
+                <form action="/updateOne/<%= task._id %>" method="post">
+                    <input type="text" name="task" id="task" value="<%= task.task %>">
+                    <button type="submit" id="addButton">Atualizar</button>
+                </form>
+                <% } %>
+    </header>
 
-    <ul><!--loop para retornar a lista de tarefas-->
-        <% taskList.forEach((task)=> { %>
-            <li>
-                <%= task.task %> | <%= task.date.toLocaleDateString('pt-BR') %>
-            </li>
-            <% } )%>
-    </ul>
-
+    <section id="tasks">
+        <ul><!--loop para retornar a lista de tarefas-->
+            <% taskList.forEach((task)=> { %>
+                <li>
+                    <%= task.task %> | <%= task.date.toLocaleDateString('pt-BR') %>
+                            <a href="/getById/<%= task._id %>">Editar</a>
+                            <a href="">Apagar</a>
+                </li>
+                <% } )%>
+        </ul>
+    </section>
 </body>
 
 </html>
